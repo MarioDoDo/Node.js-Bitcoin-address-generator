@@ -1,0 +1,17 @@
+{
+  "name": "bitcoinaddress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "build": "npx tailwindcss-cli@latest build -o ./src/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^2.1.1"
+  },
+  "dependencies": {
+    "postcss": "^8.2.10"
+  }
+}

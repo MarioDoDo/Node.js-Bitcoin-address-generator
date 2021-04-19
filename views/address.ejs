@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaše nová BTC adresa!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form action="http://localhost:4000/address" method="POST">
+        <input type="submit" value="GENEROVAT DALŠÍ ADRESU" class="text-white w-1/2 h-10 rounded-xl left-1/4 mt-32 absolute" style="background: #f2a900;">
+        </form>
+    
+
+    <p class="text-green-500 text-center mt-5"><p1 class="text-gray-500">adresa</p1><br><p2 id="address"><%= address.address %></p2><button onclick="CopyToClipboard('address')" class="w-4 ml-2"><img src="copy-line.svg" alt="COPY" class=""</img></button></p>
+    <p class="text-red-500 text-center mt-5"><p1 class="text-gray-500">privátní klíč</p1><br><p2 id="key"><%= address.key %></p2><button onclick="CopyToClipboard('key')" class="w-4 ml-2"><img src="copy-line.svg" alt="COPY"</img></button></p>
+
+
+    <script>
+        function CopyToClipboard(id)
+        {
+        var r = document.createRange();
+        r.selectNode(document.getElementById(id));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(r);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        }
+        </script>
+</body>
+</html>
